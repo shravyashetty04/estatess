@@ -1012,8 +1012,13 @@ ul {
     font-weight: 600;
 }
 
+.feature-list.compact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
 .feature-list.compact li {
-    margin-bottom: 10px;
     font-size: 0.95rem;
 }
 
