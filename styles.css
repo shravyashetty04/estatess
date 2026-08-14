@@ -2010,22 +2010,15 @@ ul {
     }
     .bottom-bar-grid {
         display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        padding-bottom: 5px;
-        -webkit-overflow-scrolling: touch;
-    }
-    .bottom-bar-grid::-webkit-scrollbar {
-        height: 6px;
-    }
-    .bottom-bar-grid::-webkit-scrollbar-thumb {
-        background: var(--color-accent);
-        border-radius: 3px;
+        flex-direction: column;
+        padding: 0;
     }
     .info-item {
-        min-width: 250px;
-        scroll-snap-align: start;
-        border-right: 1px solid rgba(255,255,255,0.05);
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .info-item:last-child {
         border-bottom: none;
     }
     .contact-item {
