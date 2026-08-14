@@ -225,6 +225,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const playNextVideo = () => {
             const currentVideo = videos[currentVideoIndex];
             heroVideo.src = currentVideo.src;
+            heroVideo.load(); // Ensure the new source is loaded
             heroVideo.play().catch(e => console.log('Autoplay prevented:', e));
 
             setTimeout(() => {
