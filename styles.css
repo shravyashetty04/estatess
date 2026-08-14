@@ -1964,8 +1964,14 @@ ul {
     }
     
     .split-layout { flex-direction: column; }
-    .specs-wrapper { flex-direction: column; }
-    .specs-image, .specs-content { width: 100%; padding: 0; }
+    .specs-wrapper { 
+        grid-template-columns: 1fr; 
+    }
+    .specs-image, .specs-content { 
+        width: 100%; 
+        padding: 0; 
+        min-width: 0; /* Prevents flex/grid blowouts */
+    }
     .ideal-grid { grid-template-columns: repeat(3, 1fr); }
 
     /* Gallery Grid */
