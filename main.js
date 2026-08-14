@@ -238,4 +238,23 @@ document.addEventListener('DOMContentLoaded', () => {
         playNextVideo();
     }
 
+    /* =========================================================================
+       7. MOBILE NAVIGATION TOGGLE
+       ======================================================================= */
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mainNavLinks = document.querySelectorAll('.main-nav a');
+
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', () => {
+            document.body.classList.toggle('nav-open');
+        });
+
+        // Close menu when a link is clicked
+        mainNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                document.body.classList.remove('nav-open');
+            });
+        });
+    }
+
 });
