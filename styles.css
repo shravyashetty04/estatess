@@ -2061,4 +2061,8 @@ ul {
     .section-title { font-size: 2rem; }
     
     .footer-links-grid { grid-template-columns: 1fr; }
+    
+    /* Make data-table fit without horizontal scroll */
+    .data-table { font-size: 0.7rem; }
+    .data-table th, .data-table td { padding: 6px 4px; word-wrap: break-word; }
 }
