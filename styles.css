@@ -855,6 +855,7 @@ ul {
     height: auto;
     transform: translate(-50%, -50%);
     object-fit: cover;
+    z-index: 2;
 }
 
 /* Fallback background image behind the video */
@@ -863,7 +864,7 @@ ul {
     inset: 0;
     background-size: cover;
     background-position: center;
-    z-index: 0;
+    z-index: 1;
     animation: slowZoom 20s infinite alternate linear;
 }
 
