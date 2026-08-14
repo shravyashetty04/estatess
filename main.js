@@ -211,4 +211,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    /* =========================================================================
+       6. HERO VIDEO PLAYLIST
+       ======================================================================= */
+    const heroVideo = document.getElementById('heroVideo');
+    if (heroVideo) {
+        const videos = [
+            { src: 'assets/1st.mp4', duration: 3000 },
+            { src: 'assets/Real_estate_walkthrough_video_202608141301.mp4', duration: 10000 }
+        ];
+        let currentVideoIndex = 0;
+
+        const playNextVideo = () => {
+            const currentVideo = videos[currentVideoIndex];
+            heroVideo.src = currentVideo.src;
+            heroVideo.play().catch(e => console.log('Autoplay prevented:', e));
+
+            setTimeout(() => {
+                currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+                playNextVideo();
+            }, currentVideo.duration);
+        };
+
+        // Start the sequence
+        playNextVideo();
+    }
+
 });
