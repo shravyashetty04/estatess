@@ -1293,16 +1293,7 @@ ul {
     .hero-subtext {
         font-size: 1.2rem;
     }
-    
-    /* Make tables horizontally scrollable on mobile */
-    .data-table, .specs-table {
-        display: block;
-        width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        white-space: nowrap;
-    }
-    
+
     .notes-box {
         padding: 15px;
     }
