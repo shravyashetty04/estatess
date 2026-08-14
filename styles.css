@@ -291,6 +291,35 @@ ul {
     padding-bottom: 150px;
 }
 
+.hero-video-wrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 2;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    animation: slowZoom 20s infinite alternate linear;
+}
+
 .hero-overlay {
     position: absolute;
     top: 0;
