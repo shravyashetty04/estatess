@@ -1873,7 +1873,7 @@ ul {
 .delay-3 { transition-delay: 0.6s; }
 
 /* ==========================================================================
-   Additional Responsive — New Sections
+   Responsive Breakpoints
    ========================================================================== */
 @media (min-width: 992px) {
     .mobile-menu-btn { display: none; }
@@ -1967,6 +1967,12 @@ ul {
     .specs-wrapper { flex-direction: column; }
     .specs-image, .specs-content { width: 100%; padding: 0; }
     .ideal-grid { grid-template-columns: repeat(3, 1fr); }
+
+    /* Gallery Grid */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -2026,8 +2032,8 @@ ul {
     
     /* Others */
     .form-row { grid-template-columns: 1fr; }
-    .tabs-nav { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-    .tab-btn { padding: 12px 15px; font-size: 0.85rem; }
+    .tabs-nav { overflow-x: auto; -webkit-overflow-scrolling: touch; display: flex; white-space: nowrap; }
+    .tab-btn { padding: 12px 15px; font-size: 0.85rem; flex-shrink: 0; }
     .footer-content { flex-direction: column; gap: 30px; text-align: center; }
     .footer-tags { justify-content: center; }
 }
@@ -2044,4 +2050,9 @@ ul {
     /* Plot Glance Responsive */
     .glance-grid { grid-template-columns: 1fr; }
     .banner-item { width: 100%; }
+    .banner-ideal-items { flex-direction: column; align-items: center; }
+    
+    .section-title { font-size: 2rem; }
+    
+    .footer-links-grid { grid-template-columns: 1fr; }
 }
