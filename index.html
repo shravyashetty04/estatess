@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Royal Green Farms | Premium Farm Land Villa Project</title>
-    <meta name="description" content="Live in Nature, Invest in Future. Premium farm land villa plots at Royal Green Farms.">
+    <meta name="description" content="Live in Nature, Invest in Future. Premium farm land villa plots at Royal Green Farms, Byrashettyhalli Village, Nelamangala. Book a site visit today.">
     <!-- Google Fonts for typography (Sotheby's style elegance) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,43 +12,100 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
+
+    <!-- =====================================================================
+         HEADER
+         ===================================================================== -->
     <header class="site-header" id="header">
         <div class="header-container">
             <div class="logo">
                 <h1>ROYAL GREEN FARMS</h1>
                 <span class="subtitle">Farm Land Villa Project</span>
             </div>
-            <nav class="main-nav">
+            <nav class="main-nav" aria-label="Main navigation">
                 <ul>
                     <li><a href="#overview">Overview</a></li>
                     <li><a href="#highlights">Highlights</a></li>
                     <li><a href="#design">Villa Design</a></li>
                     <li><a href="#details">House Details</a></li>
+                    <li><a href="#site-visit">Book Visit</a></li>
+                    <li><a href="#location">Location</a></li>
                 </ul>
             </nav>
-            <a href="#contact" class="btn btn-outline-gold">Book Now</a>
+            <a href="#site-visit" class="btn btn-outline-gold">Book Now</a>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-bg" style="background-image: url('assets/page-2.png');"></div>
+    <!-- =====================================================================
+         HERO SECTION — Cinematic Video Background
+         ===================================================================== -->
+    <section class="hero" id="home">
+        <!-- Background Video -->
+        <div class="hero-video-wrapper">
+            <video
+                class="hero-video"
+                autoplay
+                loop
+                muted
+                playsinline
+                poster="assets/page-2.png"
+                aria-hidden="true"
+            >
+                <!-- Provide an actual video source when available -->
+                <!-- <source src="assets/hero-video.mp4" type="video/mp4"> -->
+            </video>
+            <!-- Fallback background image when no video source is provided -->
+            <div class="hero-bg" style="background-image: url('assets/page-2.png');"></div>
+        </div>
+
+        <!-- Dark Overlay -->
         <div class="hero-overlay"></div>
+
+        <!-- Floating Glassmorphism Badges -->
+        <div class="hero-badge badge-top-left animate-fade-up">
+            <span class="badge-icon">⛶</span>
+            <span class="badge-text">6535 SFT</span>
+            <span class="badge-label">Plot Size</span>
+        </div>
+        <div class="hero-badge badge-top-right animate-fade-up delay-1">
+            <span class="badge-icon">🛡️</span>
+            <span class="badge-text">24/7</span>
+            <span class="badge-label">Gated Security</span>
+        </div>
+        <div class="hero-badge badge-bottom-left animate-fade-up delay-2">
+            <span class="badge-icon">🧭</span>
+            <span class="badge-text">North Facing</span>
+            <span class="badge-label">Premium Vastu</span>
+        </div>
+        <div class="hero-badge badge-bottom-right animate-fade-up delay-3">
+            <span class="badge-icon">🛣️</span>
+            <span class="badge-text">30 FT Road</span>
+            <span class="badge-label">Wide Internal Road</span>
+        </div>
+
+        <!-- Hero Content -->
         <div class="hero-content">
             <h2 class="animate-fade-up">Live in Nature, Invest in Future.</h2>
             <p class="hero-subtext animate-fade-up delay-1">Limited Premium Plots Available</p>
-            <a href="#overview" class="btn btn-gold animate-fade-up delay-2">Explore the Project</a>
+            <div class="hero-cta-group animate-fade-up delay-2">
+                <a href="#overview" class="btn btn-gold" id="hero-explore-btn">Explore the Project</a>
+                <a href="assets/Plot no 1.pdf" download class="btn btn-download" id="hero-brochure-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Download Brochure
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- Property Overview -->
+    <!-- =====================================================================
+         PROPERTY OVERVIEW
+         ===================================================================== -->
     <section id="overview" class="section overview-section">
         <div class="container">
             <div class="section-header">
                 <h3 class="section-title">Plot No. 1</h3>
                 <h4 class="section-subtitle">Premium Farm Land Villa Plot</h4>
-                <p class="section-desc">Your Perfect Space to Build a Healthy Lifestyle & Secure Future</p>
+                <p class="section-desc">Your Perfect Space to Build a Healthy Lifestyle &amp; Secure Future</p>
             </div>
 
             <div class="stats-grid">
@@ -86,7 +143,9 @@
         </div>
     </section>
 
-    <!-- Highlights Section -->
+    <!-- =====================================================================
+         HIGHLIGHTS SECTION
+         ===================================================================== -->
     <section id="highlights" class="section highlights-section">
         <div class="container">
             <div class="split-layout">
@@ -109,12 +168,12 @@
                 <div class="split-col">
                     <h3 class="subsection-title">Build Your Dream Farm Villa</h3>
                     <ul class="feature-list">
-                        <li>Design & Build Your Dream Farmhouse</li>
-                        <li>Private Garden & Lawn Area</li>
+                        <li>Design &amp; Build Your Dream Farmhouse</li>
+                        <li>Private Garden &amp; Lawn Area</li>
                         <li>Organic Kitchen Garden</li>
                         <li>Gazebo / Sit-Out Space</li>
                         <li>Ample Parking Space</li>
-                        <li>Peaceful & Serene Environment</li>
+                        <li>Peaceful &amp; Serene Environment</li>
                     </ul>
 
                     <div class="ideal-for-box">
@@ -139,204 +198,362 @@
         </div>
     </section>
 
-    <!-- Architectural Details & Measurements -->
+    <!-- =====================================================================
+         BOOK A SITE VISIT — Lead Capture Form
+         ===================================================================== -->
+    <section id="site-visit" class="section site-visit-section">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title">Book a Site Visit</h3>
+                <p class="section-desc">Experience Royal Green Farms in person. Fill in your details and we'll confirm your visit.</p>
+            </div>
+            <div class="form-card">
+                <form class="site-visit-form" id="siteVisitForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="visitor-name">Full Name</label>
+                            <input
+                                type="text"
+                                id="visitor-name"
+                                name="visitor-name"
+                                placeholder="Enter your full name"
+                                required
+                                autocomplete="name"
+                            >
+                        </div>
+                        <div class="form-group">
+                            <label for="visitor-phone">Phone Number</label>
+                            <input
+                                type="tel"
+                                id="visitor-phone"
+                                name="visitor-phone"
+                                placeholder="+91 XXXXX XXXXX"
+                                required
+                                autocomplete="tel"
+                            >
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="visitor-date">Preferred Visit Date</label>
+                            <input
+                                type="date"
+                                id="visitor-date"
+                                name="visitor-date"
+                                required
+                            >
+                        </div>
+                        <div class="form-group">
+                            <label for="visitor-message">Message (Optional)</label>
+                            <input
+                                type="text"
+                                id="visitor-message"
+                                name="visitor-message"
+                                placeholder="Any specific queries?"
+                            >
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-gold btn-submit" id="site-visit-submit">
+                        ✦ Confirm My Site Visit
+                    </button>
+                </form>
+                <!-- Success message (hidden by default) -->
+                <div class="form-success" id="formSuccess" aria-live="polite">
+                    <span class="success-icon">✔</span>
+                    <h4>Thank you! We'll be in touch shortly.</h4>
+                    <p>Our team will call you within 24 hours to confirm your visit details.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         ARCHITECTURAL DETAILS & MEASUREMENTS
+         ===================================================================== -->
     <section id="design" class="section design-section bg-light">
         <div class="container">
             <div class="section-header">
-                <h3 class="section-title">Architectural Details & Layouts</h3>
+                <h3 class="section-title">Architectural Details &amp; Layouts</h3>
                 <p class="section-desc">Meticulously designed pathways, pergolas, and entrance arches.</p>
             </div>
 
+            <!-- Gallery with Lightbox -->
             <div class="gallery-grid">
                 <div class="gallery-item large">
-                    <img src="assets/page-3.png" alt="Villa Aerial View">
+                    <img
+                        src="assets/page-3.png"
+                        alt="Villa Aerial Layout"
+                        class="lightbox-trigger"
+                        data-caption="Villa Aerial Layout – 30 FT Road Facing with extensive landscaping"
+                        id="gallery-img-1"
+                    >
                     <div class="gallery-caption">
                         <h4>Villa Aerial Layout</h4>
                         <p>30 FT Road Facing with extensive landscaping</p>
                     </div>
+                    <button class="gallery-zoom-btn" aria-label="View full screen">⤢</button>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/page-4.png" alt="Pathway Measurements">
+                    <img
+                        src="assets/page-4.png"
+                        alt="Pathway Measurements"
+                        class="lightbox-trigger"
+                        data-caption="Pathway Details – Cobblestone pavers and stepping stones"
+                        id="gallery-img-2"
+                    >
                     <div class="gallery-caption">
                         <h4>Pathway Details</h4>
                         <p>Cobblestone pavers and stepping stones</p>
                     </div>
+                    <button class="gallery-zoom-btn" aria-label="View full screen">⤢</button>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/page-6.png" alt="Pergola Details">
+                    <img
+                        src="assets/page-6.png"
+                        alt="Pergola Details"
+                        class="lightbox-trigger"
+                        data-caption="Pergola Design – Wooden structure with climbing flora"
+                        id="gallery-img-3"
+                    >
                     <div class="gallery-caption">
                         <h4>Pergola Design</h4>
                         <p>Wooden structure with climbing flora</p>
                     </div>
+                    <button class="gallery-zoom-btn" aria-label="View full screen">⤢</button>
                 </div>
             </div>
 
             <hr class="section-divider">
 
-            <!-- Pathway Measurements -->
-            <div class="detail-block">
-                <h3 class="subsection-title">Pathway Measurements</h3>
-                <div class="specs-wrapper align-start">
-                    <div class="specs-image">
-                        <img src="assets/page-4.png" alt="Pathway Map Image" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                    </div>
-                    <div class="specs-content">
-                        <table class="data-table">
-                            <thead>
-                                <tr>
-                                    <th>NO.</th>
-                                    <th>PATHWAY</th>
-                                    <th>WIDTH</th>
-                                    <th>LENGTH</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>1</td><td>Main Entrance Path (from gate)</td><td>5' - 0"</td><td>27' - 0"</td></tr>
-                                <tr><td>2</td><td>Stepping Stone Path (central)</td><td>4' - 0"</td><td>27' - 0"</td></tr>
-                                <tr><td>3</td><td>Stepping Stone Path (side curve right)</td><td>4' - 0"</td><td>18' - 0"</td></tr>
-                                <tr><td>4</td><td>Stepping Stone Path (upper left curve)</td><td>4' - 0"</td><td>19' - 0"</td></tr>
-                                <tr><td>5</td><td>Main Curved Driveway</td><td>12' - 0"</td><td>50' - 0"</td></tr>
-                                <tr><td>6</td><td>Side Curved Path</td><td>8' - 0"</td><td>26' - 0"</td></tr>
-                                <tr><td>7</td><td>Pergola Access Path</td><td>10' - 0"</td><td>10' - 0"</td></tr>
-                                <tr><td>8</td><td>Entry Driveway (between gates)</td><td>12' - 0"</td><td>12' - 0"</td></tr>
-                            </tbody>
-                        </table>
-                        <div class="notes-box mt-4">
-                            <h4>Notes</h4>
-                            <ul>
-                                <li>All dimensions are in feet-inches.</li>
-                                <li>Pathway widths are measured clear (edge to edge of pavers).</li>
-                                <li>Stepping stones are spaced with 2" gap between each stone.</li>
-                                <li>Dimensions are approximate and may vary slightly on site.</li>
-                            </ul>
+            <!-- ============================================================
+                 TABBED DATA MODULES
+                 Tabs: Measurements | Materials | Specifications
+                 ============================================================ -->
+            <div class="tabs-container" id="archTabs">
+                <!-- Tab Navigation -->
+                <nav class="tabs-nav" role="tablist" aria-label="Architectural data tabs">
+                    <button
+                        class="tab-btn active"
+                        role="tab"
+                        aria-selected="true"
+                        aria-controls="tab-measurements"
+                        id="btn-measurements"
+                        data-tab="tab-measurements"
+                    >Measurements</button>
+                    <button
+                        class="tab-btn"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="tab-materials"
+                        id="btn-materials"
+                        data-tab="tab-materials"
+                    >Materials</button>
+                    <button
+                        class="tab-btn"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="tab-specs"
+                        id="btn-specs"
+                        data-tab="tab-specs"
+                    >Specs</button>
+                </nav>
+
+                <!-- TAB PANEL 1: Measurements (Pathway) -->
+                <div class="tab-panel active" id="tab-measurements" role="tabpanel" aria-labelledby="btn-measurements">
+                    <div class="specs-wrapper align-start">
+                        <div class="specs-image">
+                            <img
+                                src="assets/page-4.png"
+                                alt="Pathway Map Image"
+                                class="lightbox-trigger"
+                                data-caption="Pathway Measurements Plan"
+                                style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                            >
+                        </div>
+                        <div class="specs-content">
+                            <h3 class="subsection-title">Pathway Measurements</h3>
+                            <div class="table-responsive">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>NO.</th>
+                                            <th>PATHWAY</th>
+                                            <th>WIDTH</th>
+                                            <th>LENGTH</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>1</td><td>Main Entrance Path (from gate)</td><td>5' - 0"</td><td>27' - 0"</td></tr>
+                                        <tr><td>2</td><td>Stepping Stone Path (central)</td><td>4' - 0"</td><td>27' - 0"</td></tr>
+                                        <tr><td>3</td><td>Stepping Stone Path (side curve right)</td><td>4' - 0"</td><td>18' - 0"</td></tr>
+                                        <tr><td>4</td><td>Stepping Stone Path (upper left curve)</td><td>4' - 0"</td><td>19' - 0"</td></tr>
+                                        <tr><td>5</td><td>Main Curved Driveway</td><td>12' - 0"</td><td>50' - 0"</td></tr>
+                                        <tr><td>6</td><td>Side Curved Path</td><td>8' - 0"</td><td>26' - 0"</td></tr>
+                                        <tr><td>7</td><td>Pergola Access Path</td><td>10' - 0"</td><td>10' - 0"</td></tr>
+                                        <tr><td>8</td><td>Entry Driveway (between gates)</td><td>12' - 0"</td><td>12' - 0"</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="notes-box mt-4">
+                                <h4>Notes</h4>
+                                <ul>
+                                    <li>All dimensions are in feet-inches.</li>
+                                    <li>Pathway widths are measured clear (edge to edge of pavers).</li>
+                                    <li>Stepping stones are spaced with 2" gap between each stone.</li>
+                                    <li>Dimensions are approximate and may vary slightly on site.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <hr class="section-divider">
+                <!-- TAB PANEL 2: Materials (Pergola) -->
+                <div class="tab-panel" id="tab-materials" role="tabpanel" aria-labelledby="btn-materials" hidden>
+                    <div class="specs-wrapper align-start">
+                        <div class="specs-image">
+                            <img
+                                src="assets/page-6.png"
+                                alt="Pergola Image Plan"
+                                class="lightbox-trigger"
+                                data-caption="Pergola Design – Structure & Materials"
+                                style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                            >
+                        </div>
+                        <div class="specs-content">
+                            <h3 class="subsection-title">Pergola Details</h3>
+                            <h4>Structure &amp; Materials</h4>
+                            <ol class="numbered-list">
+                                <li>Vertical Posts: 6" x 6"</li>
+                                <li>Top Beam: 6" x 6"</li>
+                                <li>Rafters: 3" x 6" @ 16" c/c</li>
+                                <li>Cross Battens: 2" x 4" @ 12" c/c</li>
+                                <li>Decking: Outdoor Wooden Planks (1" thick)</li>
+                                <li>Base: RCC Pedestal with Stone Cladding</li>
+                            </ol>
+                            <p class="mt-2 text-sm"><em>* All wood to be outdoor treated and weather resistant.</em></p>
 
-            <!-- Pergola Details -->
-            <div class="detail-block">
-                <h3 class="subsection-title">Pergola Details</h3>
-                <div class="specs-wrapper align-start">
-                    <div class="specs-image">
-                         <img src="assets/page-6.png" alt="Pergola Image Plan" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                    </div>
-                    <div class="specs-content">
-                        <h4>Structure & Materials</h4>
-                        <ol class="numbered-list">
-                            <li>Vertical Posts: 6" x 6"</li>
-                            <li>Top Beam: 6" x 6"</li>
-                            <li>Rafters: 3" x 6" @ 16" c/c</li>
-                            <li>Cross Battens: 2" x 4" @ 12" c/c</li>
-                            <li>Decking: Outdoor Wooden Planks (1" thick)</li>
-                            <li>Base: RCC Pedestal with Stone Cladding</li>
-                        </ol>
-                        <p class="mt-2 text-sm"><em>* All wood to be outdoor treated and weather resistant.</em></p>
-
-                        <h4 class="mt-4">Planting on Pergola</h4>
-                        <ul class="feature-list compact">
-                            <li>Bougainvillea</li>
-                            <li>Star Jasmine (Jasminum multiflorum)</li>
-                            <li>Rangoon Creeper (Quisqualis indica)</li>
-                        </ul>
-                        <p class="text-sm"><em>Climbers to be trained along the posts and across the top members.</em></p>
-
-                        <div class="notes-box mt-4">
-                            <h4>Notes</h4>
-                            <ul>
-                                <li>Wood to be treated with weatherproof coating.</li>
-                                <li>All metal fasteners to be galvanized / stainless steel.</li>
-                                <li>Ensure proper drainage around the deck area.</li>
+                            <h4 class="mt-4">Planting on Pergola</h4>
+                            <ul class="feature-list compact">
+                                <li>Bougainvillea</li>
+                                <li>Star Jasmine (Jasminum multiflorum)</li>
+                                <li>Rangoon Creeper (Quisqualis indica)</li>
                             </ul>
+                            <p class="text-sm"><em>Climbers to be trained along the posts and across the top members.</em></p>
+
+                            <div class="notes-box mt-4">
+                                <h4>Notes</h4>
+                                <ul>
+                                    <li>Wood to be treated with weatherproof coating.</li>
+                                    <li>All metal fasteners to be galvanized / stainless steel.</li>
+                                    <li>Ensure proper drainage around the deck area.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <hr class="section-divider">
-
-            <!-- Front Arch Details -->
-            <div class="detail-block">
-                <h3 class="subsection-title">Front Arch Details</h3>
-                <div class="specs-wrapper align-start">
-                    <div class="specs-content">
-                        <h4>Materials & Finish</h4>
-                        <table class="data-table">
-                            <tbody>
-                                <tr><td>ROOF</td><td>Clay / Concrete Roof Tiles</td></tr>
-                                <tr><td>PILLARS</td><td>Reinforced Cement Concrete with Stone Finish / Texture Paint</td></tr>
-                                <tr><td>MOULDINGS & CAPS</td><td>Precast Concrete with Stone Finish</td></tr>
-                                <tr><td>GATE</td><td>Mild Steel / Wrought Iron with Powder Coating</td></tr>
-                                <tr><td>LIGHTS</td><td>Outdoor Wall Lanterns (Weatherproof)</td></tr>
-                                <tr><td>FINISH</td><td>Exterior Grade Paint</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="specs-content">
-                        <h4>Dimensions Summary</h4>
-                        <table class="data-table">
-                            <tbody>
-                                <tr><td>Overall Width</td><td>12' - 0"</td></tr>
-                                <tr><td>Clear Opening</td><td>8' - 0"</td></tr>
-                                <tr><td>Overall Height</td><td>10' - 0"</td></tr>
-                                <tr><td>Pillar Width</td><td>2' - 0"</td></tr>
-                                <tr><td>Roof Depth (Front to Back)</td><td>4' - 0"</td></tr>
-                                <tr><td>Pedestal Projection</td><td>2' - 6"</td></tr>
-                                <tr><td>Gate Height</td><td>8' - 0"</td></tr>
-                            </tbody>
-                        </table>
-                        <div class="notes-box mt-4">
-                            <h4>Notes</h4>
-                            <ul>
-                                <li>All concrete to be M20 grade with proper curing.</li>
-                                <li>All steel to be rust proof with primer and powder coated finish.</li>
-                                <li>Provide proper drainage to avoid water accumulation near foundation.</li>
-                            </ul>
+                <!-- TAB PANEL 3: Specs (Front Arch) -->
+                <div class="tab-panel" id="tab-specs" role="tabpanel" aria-labelledby="btn-specs" hidden>
+                    <div class="specs-wrapper align-start">
+                        <div class="specs-content">
+                            <h3 class="subsection-title">Front Arch Details</h3>
+                            <h4>Materials &amp; Finish</h4>
+                            <div class="table-responsive">
+                                <table class="data-table">
+                                    <tbody>
+                                        <tr><td>ROOF</td><td>Clay / Concrete Roof Tiles</td></tr>
+                                        <tr><td>PILLARS</td><td>Reinforced Cement Concrete with Stone Finish / Texture Paint</td></tr>
+                                        <tr><td>MOULDINGS &amp; CAPS</td><td>Precast Concrete with Stone Finish</td></tr>
+                                        <tr><td>GATE</td><td>Mild Steel / Wrought Iron with Powder Coating</td></tr>
+                                        <tr><td>LIGHTS</td><td>Outdoor Wall Lanterns (Weatherproof)</td></tr>
+                                        <tr><td>FINISH</td><td>Exterior Grade Paint</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="specs-content">
+                            <h4 class="mt-4">Dimensions Summary</h4>
+                            <div class="table-responsive">
+                                <table class="data-table">
+                                    <tbody>
+                                        <tr><td>Overall Width</td><td>12' - 0"</td></tr>
+                                        <tr><td>Clear Opening</td><td>8' - 0"</td></tr>
+                                        <tr><td>Overall Height</td><td>10' - 0"</td></tr>
+                                        <tr><td>Pillar Width</td><td>2' - 0"</td></tr>
+                                        <tr><td>Roof Depth (Front to Back)</td><td>4' - 0"</td></tr>
+                                        <tr><td>Pedestal Projection</td><td>2' - 6"</td></tr>
+                                        <tr><td>Gate Height</td><td>8' - 0"</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="notes-box mt-4">
+                                <h4>Notes</h4>
+                                <ul>
+                                    <li>All concrete to be M20 grade with proper curing.</li>
+                                    <li>All steel to be rust proof with primer and powder coated finish.</li>
+                                    <li>Provide proper drainage to avoid water accumulation near foundation.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Front Arch Images -->
-                <div class="mt-4 text-center">
-                    <img src="assets/page-7.png" alt="Front Arch Details" style="width: 100%; max-width: 900px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <!-- Front Arch Images -->
+                    <div class="mt-4 text-center">
+                        <img
+                            src="assets/page-7.png"
+                            alt="Front Arch Details"
+                            class="lightbox-trigger"
+                            data-caption="Front Arch Details – Materials & Dimensions"
+                            style="width: 100%; max-width: 900px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                        >
+                    </div>
                 </div>
             </div>
+            <!-- END TABS -->
 
         </div>
     </section>
 
-    <!-- House Details Section -->
+    <!-- =====================================================================
+         HOUSE DETAILS SECTION
+         ===================================================================== -->
     <section id="details" class="section house-details-section">
         <div class="container">
             <div class="section-header">
-                <h3 class="section-title">House Details & Floor Plan</h3>
+                <h3 class="section-title">House Details &amp; Floor Plan</h3>
                 <h4 class="section-subtitle">Elegant Single Floor Villa</h4>
             </div>
 
             <div class="specs-wrapper align-start">
                 <div class="specs-image">
-                    <img src="assets/page-8.png" alt="House Floor Plan and Elevations" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <img
+                        src="assets/page-8.png"
+                        alt="House Floor Plan and Elevations"
+                        class="lightbox-trigger"
+                        data-caption="House Floor Plan & Elevations – 1512 SQ.FT."
+                        style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    >
                 </div>
                 <div class="specs-content">
                     <h3 class="subsection-title">Specifications</h3>
-                    <table class="specs-table">
-                        <tbody>
-                            <tr><td>Built-Up Area</td><td>1,512 SQ.FT.</td></tr>
-                            <tr><td>Carpet Area</td><td>1,246 SQ.FT.</td></tr>
-                            <tr><td>Porch Area</td><td>48 SQ.FT.</td></tr>
-                            <tr><td>Garage Area</td><td>264 SQ.FT.</td></tr>
-                            <tr><td>Total Area</td><td>1,512 SQ.FT.</td></tr>
-                            <tr><td>No. of Bedrooms</td><td>3</td></tr>
-                            <tr><td>No. of Toilets</td><td>2</td></tr>
-                            <tr><td>Floors</td><td>Ground Floor</td></tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="specs-table">
+                            <tbody>
+                                <tr><td>Built-Up Area</td><td>1,512 SQ.FT.</td></tr>
+                                <tr><td>Carpet Area</td><td>1,246 SQ.FT.</td></tr>
+                                <tr><td>Porch Area</td><td>48 SQ.FT.</td></tr>
+                                <tr><td>Garage Area</td><td>264 SQ.FT.</td></tr>
+                                <tr><td>Total Area</td><td>1,512 SQ.FT.</td></tr>
+                                <tr><td>No. of Bedrooms</td><td>3</td></tr>
+                                <tr><td>No. of Toilets</td><td>2</td></tr>
+                                <tr><td>Floors</td><td>Ground Floor</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
 
                     <h3 class="subsection-title mt-4">Features</h3>
                     <ul class="feature-list compact">
                         <li>Elegant single floor villa</li>
-                        <li>Spacious living & dining</li>
+                        <li>Spacious living &amp; dining</li>
                         <li>3 Bedrooms with 2 Toilets</li>
                         <li>Attached garage</li>
                         <li>Front porch with steps</li>
@@ -356,7 +573,7 @@
             </div>
 
             <div class="finishes-section mt-5">
-                <h3 class="subsection-title text-center">Finishes & Materials</h3>
+                <h3 class="subsection-title text-center">Finishes &amp; Materials</h3>
                 <div class="materials-grid">
                     <div class="material-card">
                         <div class="material-color" style="background-color: #d8d4cb;"></div>
@@ -364,7 +581,7 @@
                     </div>
                     <div class="material-card">
                         <div class="material-color" style="background-color: #f4ede4;"></div>
-                        <p>Cornice & Moulding<br><span>Stone Finish</span></p>
+                        <p>Cornice &amp; Moulding<br><span>Stone Finish</span></p>
                     </div>
                     <div class="material-card">
                         <div class="material-color" style="background-color: #8c8b88;"></div>
@@ -396,7 +613,42 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- =====================================================================
+         LOCATION SECTION — Interactive Google Maps
+         ===================================================================== -->
+    <section id="location" class="section location-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title">Our Location</h3>
+                <p class="section-desc">📍 Byrashettyhalli Village, Nelamangala, Bengaluru Rural District, Karnataka</p>
+            </div>
+            <div class="map-container">
+                <iframe
+                    id="location-map"
+                    title="Royal Green Farms Location – Byrashettyhalli Village, Nelamangala"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15547.285614254246!2d77.37!3d13.12!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae26c93a1b8f7b%3A0x8f6a6e7a16c4e9a0!2sByrashettyhalli%2C+Nelamangala%2C+Karnataka!5e0!3m2!1sen!2sin!4v1234567890"
+                    width="100%"
+                    height="350"
+                    style="border:0; border-radius: 12px;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+            </div>
+            <!-- Brochure download in location section -->
+            <div class="location-cta">
+                <p>Want to know more before your visit?</p>
+                <a href="assets/Plot no 1.pdf" download class="btn btn-download" id="location-brochure-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Download Project Brochure (PDF)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         FOOTER
+         ===================================================================== -->
     <footer id="contact" class="site-footer">
         <div class="container footer-content">
             <div class="footer-info">
@@ -411,13 +663,46 @@
             </div>
             <div class="footer-cta">
                 <p>For More Details</p>
-                <a href="tel:+1234567890" class="btn btn-gold btn-large">CALL NOW!</a>
+                <!-- Phase 1: Updated to functional telephone link -->
+                <a href="tel:+910000000000" class="btn btn-gold btn-large" id="footer-call-btn">📞 CALL NOW!</a>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 Royal Green Farms. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- =====================================================================
+         LIGHTBOX MODAL
+         ===================================================================== -->
+    <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+        <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose" aria-label="Close image viewer">&times;</button>
+            <img class="lightbox-img" id="lightboxImg" src="" alt="">
+            <p class="lightbox-caption" id="lightboxCaption"></p>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         FLOATING WHATSAPP WIDGET
+         ===================================================================== -->
+    <a
+        href="https://wa.me/910000000000?text=Hi%2C%20I'm%20interested%20in%20Royal%20Green%20Farms.%20Please%20share%20more%20details."
+        class="whatsapp-float"
+        id="whatsapp-float-btn"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with us on WhatsApp"
+        title="Chat on WhatsApp"
+    >
+        <!-- WhatsApp SVG Icon -->
+        <svg class="whatsapp-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M16 0C7.163 0 0 7.163 0 16c0 2.83.738 5.485 2.027 7.793L0 32l8.455-2.01A15.94 15.94 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0z" fill="#25D366"/>
+            <path d="M23.5 20.312c-.312-.156-1.844-.91-2.13-.912-.286-.002-.494.156-.688.391-.195.234-.756.79-.926.953-.17.16-.341.18-.633.022-.293-.157-1.235-.454-2.352-1.447-.869-.774-1.455-1.73-1.625-2.022-.17-.293-.018-.451.128-.597.13-.13.293-.339.44-.508.146-.168.195-.284.293-.475.098-.195.049-.366-.025-.512-.073-.146-.655-1.577-.898-2.16-.236-.565-.476-.488-.655-.497-.17-.008-.366-.01-.561-.01-.195 0-.512.073-.78.366s-1.024 1-.984 2.44c.04 1.44 1.074 2.83 1.224 3.026.15.195 2.11 3.22 5.11 4.513.713.308 1.27.49 1.703.628.716.228 1.367.196 1.882.119.574-.086 1.844-.754 2.104-1.482.26-.729.26-1.352.183-1.482-.077-.13-.284-.195-.595-.35z" fill="#fff"/>
+        </svg>
+        <span class="whatsapp-label">WhatsApp Us</span>
+    </a>
 
     <script src="main.js"></script>
 </body>

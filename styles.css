@@ -834,3 +834,595 @@ ul {
         font-size: 1rem;
     }
 }
+
+/* ==========================================================================
+   Hero Video — Cinematic Background
+   ========================================================================== */
+.hero-video-wrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+/* Fallback background image behind the video */
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    animation: slowZoom 20s infinite alternate linear;
+}
+
+/* ==========================================================================
+   Hero Glassmorphism Badges
+   ========================================================================== */
+.hero-badge {
+    position: absolute;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 14px 20px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    color: var(--color-white);
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    min-width: 120px;
+}
+
+.badge-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.badge-text {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    letter-spacing: 1px;
+}
+
+.badge-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.85;
+}
+
+.badge-top-left    { top: 120px; left: 40px; }
+.badge-top-right   { top: 120px; right: 40px; }
+.badge-bottom-left { bottom: 80px; left: 40px; }
+.badge-bottom-right{ bottom: 80px; right: 40px; }
+
+/* ==========================================================================
+   Hero CTA Group (Explore + Download Brochure)
+   ========================================================================== */
+.hero-cta-group {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Download / Brochure Button */
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(199, 167, 123, 0.6);
+    color: var(--color-white);
+    border-radius: 2px;
+    transition: var(--transition-smooth);
+}
+
+.btn-download:hover {
+    background: rgba(199, 167, 123, 0.25);
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-download svg {
+    flex-shrink: 0;
+}
+
+/* ==========================================================================
+   Gallery Zoom Button
+   ========================================================================== */
+.gallery-item {
+    cursor: pointer;
+}
+
+.gallery-zoom-btn {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    font-size: 1.2rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 5;
+    line-height: 1;
+}
+
+.gallery-item:hover .gallery-zoom-btn {
+    opacity: 1;
+}
+
+/* ==========================================================================
+   Lightbox Modal
+   ========================================================================== */
+.lightbox-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.lightbox-modal[hidden] {
+    display: none;
+}
+
+.lightbox-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    animation: fadeIn 0.25s ease;
+}
+
+.lightbox-content {
+    position: relative;
+    z-index: 1;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    animation: scaleIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.lightbox-img {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-caption {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    text-align: center;
+    font-style: italic;
+    max-width: 600px;
+}
+
+.lightbox-close {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--color-white);
+    font-size: 2rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    line-height: 1;
+    transition: background 0.2s ease;
+    z-index: 2;
+}
+
+.lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.85); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+/* ==========================================================================
+   Tabbed Data Modules
+   ========================================================================== */
+.tabs-container {
+    margin-top: 2rem;
+}
+
+.tabs-nav {
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid #eaeaea;
+    margin-bottom: 2rem;
+}
+
+.tab-btn {
+    padding: 14px 32px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    color: var(--color-text-light);
+    transition: var(--transition-smooth);
+    position: relative;
+}
+
+.tab-btn:hover {
+    color: var(--color-primary);
+}
+
+.tab-btn.active {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-accent);
+    font-weight: 600;
+}
+
+.tab-panel {
+    animation: fadeIn 0.35s ease;
+}
+
+.tab-panel[hidden] {
+    display: none;
+}
+
+/* ==========================================================================
+   Site Visit Form — Lead Capture
+   ========================================================================== */
+.site-visit-section {
+    background: linear-gradient(135deg, #0F3B21 0%, #072212 100%);
+    color: var(--color-white);
+}
+
+.site-visit-section .section-title {
+    color: var(--color-white);
+}
+
+.site-visit-section .section-desc {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.form-card {
+    max-width: 860px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    padding: 48px 40px;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.3);
+}
+
+.site-visit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--color-accent);
+}
+
+.form-group input {
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    color: var(--color-white);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.form-group input:focus {
+    border-color: var(--color-accent);
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 0 3px rgba(199, 167, 123, 0.2);
+}
+
+/* Date picker calendar icon color fix for dark backgrounds */
+.form-group input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1) opacity(0.6);
+    cursor: pointer;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 18px;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-top: 8px;
+    border-radius: 8px;
+    transition: var(--transition-smooth);
+    box-shadow: 0 6px 20px rgba(199, 167, 123, 0.3);
+}
+
+.btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(199, 167, 123, 0.4);
+}
+
+/* Form Success State */
+.form-success {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 0.5s ease;
+}
+
+.form-success.visible {
+    display: flex;
+}
+
+.success-icon {
+    width: 64px;
+    height: 64px;
+    background: var(--color-accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: white;
+    margin: 0 auto;
+}
+
+.form-success h4 {
+    color: var(--color-white);
+    font-size: 1.4rem;
+    margin-top: 8px;
+}
+
+.form-success p {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* ==========================================================================
+   Location Section & Map
+   ========================================================================== */
+.location-section {
+    background-color: var(--color-bg-light);
+}
+
+.map-container {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+    margin-top: 2rem;
+}
+
+.map-container iframe {
+    display: block;
+}
+
+.location-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: 2.5rem;
+}
+
+.location-cta p {
+    color: var(--color-text-light);
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.location-cta .btn-download {
+    background: var(--color-primary);
+    border-color: var(--color-accent);
+    color: var(--color-white);
+    padding: 14px 32px;
+}
+
+.location-cta .btn-download:hover {
+    background: var(--color-primary-dark);
+    border-color: var(--color-accent);
+}
+
+/* ==========================================================================
+   Floating WhatsApp Widget
+   ========================================================================== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #25D366;
+    color: #fff;
+    padding: 12px 20px 12px 14px;
+    border-radius: 50px;
+    box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: waPulse 2.5s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.08) translateY(-2px);
+    box-shadow: 0 12px 32px rgba(37, 211, 102, 0.55);
+    animation: none;
+    color: #fff;
+}
+
+.whatsapp-icon {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+}
+
+.whatsapp-label {
+    white-space: nowrap;
+}
+
+@keyframes waPulse {
+    0%   { box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45), 0 0 0 0 rgba(37, 211, 102, 0.4); }
+    50%  { box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45), 0 0 0 10px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45), 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* ==========================================================================
+   Responsive Table Wrapper
+   ========================================================================== */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+}
+
+/* ==========================================================================
+   Delay 3 for hero badge animation
+   ========================================================================== */
+.delay-3 { transition-delay: 0.6s; }
+
+/* ==========================================================================
+   Additional Responsive — New Sections
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Hero badges — hide on mobile to avoid clutter */
+    .hero-badge {
+        display: none;
+    }
+
+    /* Form layout stacks on mobile */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .form-card {
+        padding: 28px 20px;
+    }
+
+    /* Tabs scroll horizontally on small screens */
+    .tabs-nav {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .tab-btn {
+        padding: 12px 20px;
+        white-space: nowrap;
+        font-size: 0.8rem;
+    }
+
+    /* WhatsApp label hidden on very small screens */
+    .whatsapp-label {
+        display: none;
+    }
+
+    .whatsapp-float {
+        padding: 14px;
+        border-radius: 50%;
+    }
+
+    /* Hero CTA group stacks */
+    .hero-cta-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .badge-top-left, .badge-top-right, .badge-bottom-left, .badge-bottom-right {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-card {
+        padding: 20px 16px;
+    }
+
+    .map-container iframe {
+        height: 250px !important;
+    }
+}
