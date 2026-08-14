@@ -2028,8 +2028,8 @@ ul {
     
     /* Others */
     .form-row { grid-template-columns: 1fr; }
-    .tabs-nav { overflow-x: auto; -webkit-overflow-scrolling: touch; display: flex; white-space: nowrap; }
-    .tab-btn { padding: 12px 15px; font-size: 0.85rem; flex-shrink: 0; }
+    .tabs-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; border-bottom: 1px solid rgba(0,0,0,0.1); }
+    .tab-btn { padding: 10px 8px; font-size: 0.75rem; flex: 1; text-align: center; }
     .footer-content { flex-direction: column; gap: 30px; text-align: center; }
     .footer-tags { justify-content: center; }
 }
